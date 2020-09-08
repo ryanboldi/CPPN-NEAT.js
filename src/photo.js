@@ -9,18 +9,17 @@ class Photo {
     }
 
     draw() {
-        let img;
-        img = createImage(this.sideLength, this.sideLength);
+        let img = createImage(this.sideLength, this.sideLength);
         img.loadPixels();
 
         for (let i = 0; i < img.width; i++) {
             for (let j = 0; j < img.height; j++) {
                 //get outputs from this.brain
-                img.set(i, j, random(0, 1));
+                img.set(i, j, 0.3);
             }
         }
 
         img.updatePixels();
-        image(image, this.x, this.y);
+        image(img, this.x, this.y);
     }
 }
