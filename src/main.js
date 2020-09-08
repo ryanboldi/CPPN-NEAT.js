@@ -9,11 +9,11 @@ let p;
 
 function setup() {
     createCanvas(WIDTH, HEIGHT);
-    colorMode(RGB, 1);
+    colorMode(RGB, 255);
     p = new Photo(0, 0);
 }
 
 function draw() {
-    background(0.9);
+
     p.draw();
 }
