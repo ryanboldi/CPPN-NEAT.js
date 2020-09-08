@@ -1,0 +1,1 @@
+/// handles the array of images, displaying the current generation.
