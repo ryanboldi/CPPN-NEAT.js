@@ -1,6 +1,6 @@
 //handles the photo class, each of these guys will have a CPPN that represents its genetic material.
 
-class Photo {
+class Photograph {
     constructor(x, y, genome = NaN) {
         this.x = x;
         this.y = y;
