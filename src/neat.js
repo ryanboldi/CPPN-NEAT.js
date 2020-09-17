@@ -15,7 +15,7 @@ var neat;
 /*construct GA*/
 function initNeat() {
     neat = new Neat(
-        2, 3,
+        3, 3,
         null,
         {
             mutation: [
@@ -36,7 +36,7 @@ function initNeat() {
             popsize: PLAYERS,
             mutationRate: MUTATION_RATE,
             elitism: ELITISM,
-            network: new Architect.Random(2, START_HIDDEN_SIZE, 3)
+            network: new Architect.Random(3, START_HIDDEN_SIZE, 3)
         }
 
     );

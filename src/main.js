@@ -13,7 +13,7 @@ let PLAYERS = grids * grids; //How many players to test at a time
 let ITERATIONS = 1200; //how many frames per generation maximum
 let MUTATION_RATE = 0.9;
 let ELITISM = Math.round(0.1 * PLAYERS);
-let START_HIDDEN_SIZE = 4;
+let START_HIDDEN_SIZE = 1;
 
 function setup() {
     createCanvas(WIDTH, HEIGHT);

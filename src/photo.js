@@ -17,7 +17,9 @@ class Photograph {
         for (let i = 0; i < img.width; i++) {
             for (let j = 0; j < img.height; j++) {
                 //get outputs from this.brain
-                let outputs = this.brain.activate([(i / sideLength), (j / sideLength)]);
+                let r = Math.sqrt(((sideLength / 2) - i) ** 2 + ((sideLength / 2) - j) ** 2);
+                let rad = r / (sideLength ** 2);
+                let outputs = this.brain.activate([(i / sideLength) ** 2, (j / sideLength) ** 2, rad]);
                 img.set(i, j, color(outputs[0], outputs[1], outputs[2]));
             }
         }
