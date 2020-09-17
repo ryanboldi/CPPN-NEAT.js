@@ -15,7 +15,7 @@ class Photograph {
         for (let i = 0; i < img.width; i++) {
             for (let j = 0; j < img.height; j++) {
                 //get outputs from this.brain
-                img.set(i, j, color(200, 0, 0));
+                img.set(i, j, color(0));
             }
         }
 

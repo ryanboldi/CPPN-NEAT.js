@@ -6,13 +6,6 @@ var Architect = neataptic.Architect;
 
 Config.warnings = false;
 
-/* genetic algorithm settings */
-var PLAYERS = 50; //How many players to test at a time
-var ITERATIONS = 1200; //how many frames per generation maximum
-var MUTATION_RATE = 0.5;
-var ELITISM = Math.round(0.1 * PLAYERS);
-var START_HIDDEN_SIZE = 6;
-
 /* trained Population */
 var USE_TRAINED_POP = false;
 
@@ -22,7 +15,7 @@ var neat;
 /*construct GA*/
 function initNeat() {
     neat = new Neat(
-        4, 2,
+        2, 1,
         null,
         {
             mutation: [
@@ -43,7 +36,7 @@ function initNeat() {
             popsize: PLAYERS,
             mutationRate: MUTATION_RATE,
             elitism: ELITISM,
-            network: new Architect.Random(4, START_HIDDEN_SIZE, 2)
+            network: new Architect.Random(2, START_HIDDEN_SIZE, 1)
         }
 
     );
