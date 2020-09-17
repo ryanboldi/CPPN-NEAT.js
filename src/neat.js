@@ -15,7 +15,7 @@ var neat;
 /*construct GA*/
 function initNeat() {
     neat = new Neat(
-        2, 1,
+        2, 3,
         null,
         {
             mutation: [
@@ -36,7 +36,7 @@ function initNeat() {
             popsize: PLAYERS,
             mutationRate: MUTATION_RATE,
             elitism: ELITISM,
-            network: new Architect.Random(2, START_HIDDEN_SIZE, 1)
+            network: new Architect.Random(2, START_HIDDEN_SIZE, 3)
         }
 
     );
@@ -52,7 +52,7 @@ function startEvaluation() {
     for (let genome in neat.population) {
         genome = neat.population[genome];
         new Photograph(i * sideLength, j * sideLength, genome);
-        if (i >= grids) {
+        if (i >= grids - 1) {
             j++;
             i = 0;
         } else {
