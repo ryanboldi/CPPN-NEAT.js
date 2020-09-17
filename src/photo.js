@@ -4,12 +4,13 @@ class Photograph {
     constructor(x, y, genome = NaN) {
         this.x = x;
         this.y = y;
-        this.sideLength = WIDTH / grids;
         this.brain = genome;
+
+        photos.push(this);
     }
 
     draw() {
-        let img = createImage(this.sideLength, this.sideLength);
+        let img = createImage(sideLength, sideLength);
         img.loadPixels();
 
         for (let i = 0; i < img.width; i++) {
