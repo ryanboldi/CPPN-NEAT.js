@@ -45,7 +45,7 @@ function initNeat() {
 }
 
 function startEvaluation() {
-
+    photos = [];
     let i = 0;
     let j = 0;
 
@@ -92,4 +92,20 @@ function endEvaluation() {
 
     neat.generation++;
     startEvaluation();
+}
+
+function mouseClicked() {
+    let clickedX = floor(mouseX / sideLength);
+    let clickedY = floor(mouseY / sideLength);
+
+    photoClicked = (clickedY * grids) + clickedX;
+
+    //give fitness to the clicked photo
+    photos[photoClicked].brain.score += 10;
+}
+
+function keyPressed() {
+    if (keyCode == UP_ARROW) {
+        endEvaluation();
+    }
 }

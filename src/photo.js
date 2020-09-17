@@ -5,6 +5,7 @@ class Photograph {
         this.x = x;
         this.y = y;
         this.brain = genome;
+        this.brain.score = 0;
 
         photos.push(this);
     }
