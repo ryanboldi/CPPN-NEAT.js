@@ -52,7 +52,7 @@ function startEvaluation() {
     for (let genome in neat.population) {
         genome = neat.population[genome];
         new Photograph(i * sideLength, j * sideLength, genome);
-        if (i >= 3) {
+        if (i >= grids) {
             j++;
             i = 0;
         } else {
@@ -60,6 +60,7 @@ function startEvaluation() {
         }
     }
     neat.mutate();
+    drawPhotos();
 }
 
 
@@ -98,10 +99,15 @@ function mouseClicked() {
     let clickedX = floor(mouseX / sideLength);
     let clickedY = floor(mouseY / sideLength);
 
-    photoClicked = (clickedY * grids) + clickedX;
+    if (clickedX >= 0 && clickedX < grids) {
+        if (clickedY >= 0 && clickedY < grids) {
+            console.log(`clicked (${clickedX},${clickedY})`);
+            photoClicked = (clickedY * grids) + clickedX;
 
-    //give fitness to the clicked photo
-    photos[photoClicked].brain.score += 10;
+            //give fitness to the clicked photo
+            photos[photoClicked].brain.score += 10;
+        }
+    }
 }
 
 function keyPressed() {
