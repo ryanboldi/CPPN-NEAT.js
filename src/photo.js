@@ -4,7 +4,7 @@ class Photo {
     constructor(x, y, genome = NaN) {
         this.x = x;
         this.y = y;
-        this.sideLength = WIDTH / gridWidth;
+        this.sideLength = WIDTH / grids;
         this.brain = genome;
     }
 

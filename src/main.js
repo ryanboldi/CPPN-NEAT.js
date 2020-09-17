@@ -3,7 +3,7 @@
 const WIDTH = 800,
     HEIGHT = 800;
 
-const gridWidth = 3; //n x n grid
+const grids = 3; //n x n grid
 
 let p;
 
