@@ -45,10 +45,19 @@ function initNeat() {
 }
 
 function startEvaluation() {
-    balls = [];  //resets ball array.
-    for (var genome in neat.population) {
+
+    let i = 0;
+    let j = 0;
+
+    for (let genome in neat.population) {
         genome = neat.population[genome];
-        new Ball(genome);
+        new Photograph(i * sideLength, j * sideLength, genome);
+        if (i >= 3) {
+            j++;
+            i = 0;
+        } else {
+            i++;
+        }
     }
     neat.mutate();
 }
