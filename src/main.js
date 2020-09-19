@@ -3,7 +3,7 @@
 const WIDTH = 400,
     HEIGHT = 400;
 
-const grids = 2; //n x n grid MUST BE DIVISIBLE
+const grids = 5; //n x n grid MUST BE DIVISIBLE
 const sideLength = WIDTH / grids;
 
 let photos = [];
