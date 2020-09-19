@@ -25,4 +25,8 @@ class Photograph {
         img.updatePixels();
         image(img, this.x, this.y);
     }
+
+    getFitness() {
+        //FITNESS WILL BE DIFFERENCE OF THE IMAGES TO THE REST OF THE POPULATION
+    }
 }
